@@ -6,7 +6,7 @@
 /*   By: mhaddi <mhaddi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:10:12 by mhaddi            #+#    #+#             */
-/*   Updated: 2022/03/16 17:12:14 by mhaddi           ###   ########.fr       */
+/*   Updated: 2022/03/17 15:13:56 by mhaddi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 Cat::Cat(void)
 {
-	this->type = "Cat";
 	std::cout << "Cat constructor called" << std::endl;
+	this->type = "Cat";
 	return ;
 }
 
