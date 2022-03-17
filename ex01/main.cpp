@@ -6,7 +6,7 @@
 /*   By: mhaddi <mhaddi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:33:57 by mhaddi            #+#    #+#             */
-/*   Updated: 2022/03/17 17:06:53 by mhaddi           ###   ########.fr       */
+/*   Updated: 2022/03/17 18:26:37 by mhaddi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,19 @@ int main() {
 	std::cout << std::endl;
 
 	Cat c2 = c1;
+
+	/*
+	 * Cat c2 = c1;
+	 * Doing this, `=` doesn't call the assignment operator,
+	 * but instead, it calls the copy constructor because 
+	 * a new object is created.
+	 * So this is equivalent to: Cat c2(c1);
+	 *
+	 * Cat c2;
+	 * c2 = c1;
+	 * Doing this, `=` calls the assignment operator.
+	 *
+	 */
 
 	std::cout << std::endl;
 	c2.getBrain().printIdeas();
