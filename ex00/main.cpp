@@ -6,12 +6,13 @@
 /*   By: mhaddi <mhaddi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:33:57 by mhaddi            #+#    #+#             */
-/*   Updated: 2022/03/16 17:14:28 by mhaddi           ###   ########.fr       */
+/*   Updated: 2022/03/16 18:28:36 by mhaddi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongCat.hpp"
 #include <iostream>
 
 int main() {
@@ -30,6 +31,14 @@ int main() {
 	delete meta;
 	delete doggo;
 	delete kitten;
+
+	/////////////////////////////////////////////////
+	
+	const WrongAnimal* wrongKitten = new WrongCat();
+
+	std::cout << wrongKitten->getType() << std::endl;
+	wrongKitten->makeSound();
+	delete wrongKitten;
 
 	return 0;
 

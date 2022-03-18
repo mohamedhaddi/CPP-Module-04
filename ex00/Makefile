@@ -1,5 +1,5 @@
 CC=c++
-SRC=main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC=main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 CFLAGS=-Wall -Wextra -Werror -std=c++98
 DFLAGS=-g
 NAME=Polymorphism

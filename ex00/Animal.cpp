@@ -6,7 +6,7 @@
 /*   By: mhaddi <mhaddi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:10:12 by mhaddi            #+#    #+#             */
-/*   Updated: 2022/03/16 16:36:30 by mhaddi           ###   ########.fr       */
+/*   Updated: 2022/03/16 18:23:56 by mhaddi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,6 @@ std::string Animal::getType(void) const
 
 void Animal::makeSound(void) const
 {
-	std::cout << "..." << std::endl;
+	std::cout << "I'm an animal." << std::endl;
 	return ;
 }
