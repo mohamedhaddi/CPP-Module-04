@@ -1,49 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhaddi <mhaddi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/18 20:46:58 by mhaddi            #+#    #+#             */
-/*   Updated: 2022/03/18 20:47:15 by mhaddi           ###   ########.fr       */
+/*   Created: 2022/03/16 16:10:12 by mhaddi            #+#    #+#             */
+/*   Updated: 2022/03/16 16:36:30 by mhaddi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Animal.hpp"
 #include <iostream>
 
-Dog::Dog(void)
+Animal::Animal(void): type("Animal")
 {
-	std::cout << "Dog constructor called" << std::endl;
-	this->type = "Dog";
+	std::cout << "Animal constructor called" << std::endl;
 	return ;
 }
 
-Dog::Dog(Dog const &src)
+Animal::Animal(Animal const &src)
 {
-	std::cout << "Dog copy constructor called" << std::endl;
+	std::cout << "Animal copy constructor called" << std::endl;
 	*this = src;
 	return ;
 }
 
-Dog::~Dog(void)
+Animal::~Animal(void)
 {
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << "Animal destructor called" << std::endl;
 	return ;
 }
 
-Dog &Dog::operator=(Dog const &rhs)
+Animal &Animal::operator=(Animal const &rhs)
 {
-	std::cout << "Dog assignment operator called" << std::endl;
+	std::cout << "Animal assignment operator called" << std::endl;
 	if (this != &rhs)
 		this->type = rhs.type;
 	return *this;
 }
 
-void Dog::makeSound(void) const
+std::string Animal::getType(void) const
 {
-	std::cout << "Woof! Woof!" << std::endl;
-	return ;
+	return this->type;
 }
 
+void Animal::makeSound(void) const
+{
+	std::cout << "..." << std::endl;
+	return ;
+}
